@@ -18,15 +18,15 @@ spring:
       client:
         registration:
           google:
-            clientId: 1088694523325-7qkl49d464jq4tq8ak0iqt53ce26jocf.apps.googleusercontent.com
-            clientSecret: uHdvmRIz0uxHtj25HH2uEIda
+            clientId: 31259973273-plo2vlp0vqlek6n959ur2a5ttvingg2r.apps.googleusercontent.com
+            clientSecret: qQe8VlCSFbDpv-eOMnejTTnB
             redirectUri: "{baseUrl}/oauth2/callback/{registrationId}"
             scope:
               - email
               - profile
           facebook:
-            clientId: 121189305185277
-            clientSecret: 42ffe5aa7379e8326387e0fe16f34132
+            clientId: 192937415784619
+            clientSecret: 44c76011f888f4f943e6f78a39cbe5f9
             redirectUri: "{baseUrl}/oauth2/callback/{registrationId}"
             scope:
               - email
@@ -36,8 +36,8 @@ spring:
             clientSecret: 959ebe14a20c2a0f6aa7d9d96d98638c59c3e78e
             redirectUri: "{baseUrl}/oauth2/callback/{registrationId}"
             scope:
-              - user:email
-              - read:user
+              - email
+              - public_profile
         provider:
           facebook:
             authorizationUri: https://www.facebook.com/v3.0/dialog/oauth
@@ -53,6 +53,6 @@ app:
     # redirectUri mentioned by the client in the /oauth2/authorize request.
     # We're not using cookies because they won't work well in mobile clients.
     authorizedRedirectUris:
-      - http://localhost:9000/oauth2/redirect
+      - http://localhost:8080/oauth2/redirect
       - myandroidapp://oauth2/redirect
       - myiosapp://oauth2/redirect
